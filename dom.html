@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuadrados Interactivos¡¡¡</title>
+    <link rel="stylesheet" href="style11.css">
+</head>
+<body>
+
+<div class="cuadro" id="cuadro1">
+    <h3>Uso de innerHTML</h3>
+    <button onclick="mostrarMensaje('mensaje1')">Ver detalles</button>
+    <div id="mensaje1" class="mensaje">Este método permite modificar el contenido HTML de un elemento.</div>
+</div>
+
+<div class="cuadro" id="cuadro2">
+    <h3>getElementsByTagName</h3>
+    <button onclick="mostrarMensaje('mensaje2')">Ver detalles</button>
+    <div id="mensaje2" class="mensaje">Devuelve una colección de elementos que coinciden con la etiqueta especificada.</div>
+</div>
+
+<div class="cuadro" id="cuadro3">
+    <h3>Uso de outerHTML</h3>
+    <button onclick="mostrarMensaje('mensaje3')">Ver detalles</button>
+    <div id="mensaje3" class="mensaje">Permite obtener o modificar el contenido HTML del elemento y su propio elemento.</div>
+</div>
+
+<div class="cuadro" id="cuadro4">
+    <h3>querySelectorAll</h3>
+    <button onclick="mostrarMensaje('mensaje4')">Ver detalles</button>
+    <div id="mensaje4" class="mensaje">Recupera todos los elementos que coinciden con el selector CSS proporcionado.</div>
+</div>
+
+<script>
+    function mostrarMensaje(mensajeId) {
+        const mensaje = document.getElementById(mensajeId);
+        mensaje.style.display = 'block'; 
+    }
+
+    function ocultarMensajes() {
+        const mensajes = document.querySelectorAll('.mensaje');
+        mensajes.forEach(m => m.style.display = 'none'); 
+    }
+</script>
+
+</body>
+</html>
